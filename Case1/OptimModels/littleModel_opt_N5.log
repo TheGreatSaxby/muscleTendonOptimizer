@@ -1,0 +1,109 @@
+muscles.getSize
+
+ans =
+
+    80
+
+if system_dependent('IsDebugMode')==1, dbquit all; end
+a_optimizeMusParam_generic_original
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+curr_mus_name = char(muscles.get(n_mus).getName);
+curr_mus_name
+
+curr_mus_name =
+
+    'addbrev_r'
+
+curr_mus_name(end-2:end)
+
+ans =
+
+    'v_r'
+
+curr_mus_name(end-1:end)
+
+ans =
+
+    '_r'
+
+curr_mus_name(end)
+
+ans =
+
+    'r'
+
+if system_dependent('IsDebugMode')==1, dbquit all; end
+a_optimizeMusParam_generic_original
+processing mus 1: addbrev_r
+{Variable output array "varargout" must be a cell array.
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('SampleMuscleQuantities>GetJointsSpannedByMuscle', 'D:\modeling\EMG_driven\Muscle Optimizer\Functions_MOv2\SampleMuscleQuantities.m', 232)" style="font-weight:bold">SampleMuscleQuantities>GetJointsSpannedByMuscle</a> (<a href="matlab: opentoline('D:\modeling\EMG_driven\Muscle Optimizer\Functions_MOv2\SampleMuscleQuantities.m',232,0)">line 232</a>)
+function [jointNameSet,varargout] = GetJointsSpannedByMuscle(osimModel, OSMuscleName)
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('SampleMuscleQuantities', 'D:\modeling\EMG_driven\Muscle Optimizer\Functions_MOv2\SampleMuscleQuantities.m', 50)" style="font-weight:bold">SampleMuscleQuantities</a> (<a href="matlab: opentoline('D:\modeling\EMG_driven\Muscle Optimizer\Functions_MOv2\SampleMuscleQuantities.m',50,0)">line 50</a>)
+muscleCrossedJointSet = GetJointsSpannedByMuscle(osimModel, OSMuscle);
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('optimSelectMuscleParams', 'D:\modeling\EMG_driven\Muscle Optimizer\Functions_MOv2\optimSelectMuscleParams.m', 62)" style="font-weight:bold">optimSelectMuscleParams</a> (<a href="matlab: opentoline('D:\modeling\EMG_driven\Muscle Optimizer\Functions_MOv2\optimSelectMuscleParams.m',62,0)">line 62</a>)
+    Mus_ref = SampleMuscleQuantities(osimModel_ref,curr_mus,'all',N_eval);
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('a_optimizeMusParam_generic_original', 'D:\modeling\EMG_driven\Muscle Optimizer\a_optimizeMusParam_generic_original.m', 67)" style="font-weight:bold">a_optimizeMusParam_generic_original</a> (<a href="matlab: opentoline('D:\modeling\EMG_driven\Muscle Optimizer\a_optimizeMusParam_generic_original.m',67,0)">line 67</a>)
+osimModel_opt = optimSelectMuscleParams(osimModel_ref_filepath, osimModel_targ_filepath, N_eval, log_folder, limbSide);
+} 
+matlab.internal.language.introspective.errorDocCallback('SampleMuscleQuantities>GetJointsSpannedByMuscle', 'D:\modeling\EMG_driven\Muscle Optimizer\Functions_MOv2\SampleMuscleQuantities.m', 232)
+opentoline('D:\modeling\EMG_driven\Muscle Optimizer\Functions_MOv2\SampleMuscleQuantities.m',232,0)
+a_optimizeMusParam_generic_original
+processing mus 1: addbrev_r
+if system_dependent('IsDebugMode')==1, dbstep in; end
+{Error: <a href="matlab: opentoline('D:\modeling\EMG_driven\Muscle Optimizer\Functions_MOv2\SampleMuscleQuantities.m',315,13)">File: SampleMuscleQuantities.m Line: 315 Column: 13
+</a>Incorrect use of '=' operator. To assign a value to a variable, use '='. To compare values for equality, use '=='.
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('optimSelectMuscleParams', 'D:\modeling\EMG_driven\Muscle Optimizer\Functions_MOv2\optimSelectMuscleParams.m', 62)" style="font-weight:bold">optimSelectMuscleParams</a> (<a href="matlab: opentoline('D:\modeling\EMG_driven\Muscle Optimizer\Functions_MOv2\optimSelectMuscleParams.m',62,0)">line 62</a>)
+    Mus_ref = SampleMuscleQuantities(osimModel_ref,curr_mus,'all',N_eval);
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('a_optimizeMusParam_generic_original', 'D:\modeling\EMG_driven\Muscle Optimizer\a_optimizeMusParam_generic_original.m', 67)" style="font-weight:bold">a_optimizeMusParam_generic_original</a> (<a href="matlab: opentoline('D:\modeling\EMG_driven\Muscle Optimizer\a_optimizeMusParam_generic_original.m',67,0)">line 67</a>)
+osimModel_opt = optimSelectMuscleParams(osimModel_ref_filepath, osimModel_targ_filepath, N_eval, log_folder, limbSide);
+} 
+a_optimizeMusParam_generic_original
+processing mus 1: addbrev_r
+if system_dependent('IsDebugMode')==1, dbstep in; end
+{Error: <a href="matlab: opentoline('D:\modeling\EMG_driven\Muscle Optimizer\Functions_MOv2\SampleMuscleQuantities.m',315,13)">File: SampleMuscleQuantities.m Line: 315 Column: 13
+</a>Incorrect use of '=' operator. To assign a value to a variable, use '='. To compare values for equality, use '=='.
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('optimSelectMuscleParams', 'D:\modeling\EMG_driven\Muscle Optimizer\Functions_MOv2\optimSelectMuscleParams.m', 62)" style="font-weight:bold">optimSelectMuscleParams</a> (<a href="matlab: opentoline('D:\modeling\EMG_driven\Muscle Optimizer\Functions_MOv2\optimSelectMuscleParams.m',62,0)">line 62</a>)
+    Mus_ref = SampleMuscleQuantities(osimModel_ref,curr_mus,'all',N_eval);
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('a_optimizeMusParam_generic_original', 'D:\modeling\EMG_driven\Muscle Optimizer\a_optimizeMusParam_generic_original.m', 67)" style="font-weight:bold">a_optimizeMusParam_generic_original</a> (<a href="matlab: opentoline('D:\modeling\EMG_driven\Muscle Optimizer\a_optimizeMusParam_generic_original.m',67,0)">line 67</a>)
+osimModel_opt = optimSelectMuscleParams(osimModel_ref_filepath, osimModel_targ_filepath, N_eval, log_folder, limbSide);
+} 
+a_optimizeMusParam_generic_original
+processing mus 1: addbrev_r
+if system_dependent('IsDebugMode')==1, dbstep in; end
+<a href="matlab: opentoline('D:\modeling\EMG_driven\Muscle Optimizer\Functions_MOv2\SampleMuscleQuantities.m',41,1)">41  </a>limit_discr = 1; 
+if system_dependent('IsDebugMode')==1, dbstep; end
+<a href="matlab: opentoline('D:\modeling\EMG_driven\Muscle Optimizer\Functions_MOv2\SampleMuscleQuantities.m',43,1)">43  </a>min_increm_in_deg = 2.5;
+if system_dependent('IsDebugMode')==1, dbstep; end
+<a href="matlab: opentoline('D:\modeling\EMG_driven\Muscle Optimizer\Functions_MOv2\SampleMuscleQuantities.m',47,1)">47  </a>currentState = osimModel.initSystem();
+if system_dependent('IsDebugMode')==1, dbstep; end
+<a href="matlab: opentoline('D:\modeling\EMG_driven\Muscle Optimizer\Functions_MOv2\SampleMuscleQuantities.m',50,1)">50  </a>muscleCrossedJointSet = GetJointsSpannedByMuscle(osimModel, OSMuscle);
+if system_dependent('IsDebugMode')==1, dbcont; end
+if system_dependent('IsDebugMode')==1, dbcont; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbcont; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbquit all; end
+a_optimizeMusParam_generic_original
+if system_dependent('IsDebugMode')==1, dbcont; end
+processing mus 1: addbrev_r
+if system_dependent('IsDebugMode')==1, dbcont; end
+processing mus 1: addbrev_r
