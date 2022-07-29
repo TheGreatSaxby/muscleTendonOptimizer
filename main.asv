@@ -90,10 +90,8 @@ y = [Results_MusVarMetrics.Lopt_templ(1) Results_MusVarMetrics.Lopt_opt(1) dL; .
         Results_MusVarMetrics.Lts_templ(1) Results_MusVarMetrics.Lts_opt(1) dT];
 namesOfGroups={'Optimal fibre length', 'tendon slack length'};
 bar(y)
-box off
 set(gca,'xticklabel',namesOfGroups)
-legend('template', 'optimized', 'difference')
-legend box off
+legend('template', 'optimized', 
 
 % removing functions from path 
 rmpath(genpath('./Functions_MOv2'));

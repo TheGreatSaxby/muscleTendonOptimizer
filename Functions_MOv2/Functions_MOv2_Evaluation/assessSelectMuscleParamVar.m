@@ -43,7 +43,7 @@ Muscles_opt         = Optimized_osimModel.getMuscles();
 %     end
 % end
     
-    for n_mus = 0:Muscles_ref.getSize()-1
+    for n_mus = 0:nMuscleForUse-1
         
         % current muscle name
         curr_mus_name = Muscles_ref.get(n_mus).getName;

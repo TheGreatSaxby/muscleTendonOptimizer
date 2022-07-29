@@ -1,4 +1,4 @@
-function [osimModel_opt, SimInfo] = optimSelectMuscleParams(osimModel_ref_filepath, osimModel_targ_filepath, N_eval, log_folder, limbSide, newDOFs, adjustOptFL)
+function [osimModel_opt, SimInfo] = optimSelectMuscleParams(osimModel_ref_filepath, osimModel_targ_filepath, N_eval, log_folder, limbSide, nMuscleForUse)
 
 % import opensim libraries
 import org.opensim.modeling.*
@@ -7,14 +7,14 @@ import org.opensim.modeling.*
 res_file_id_exp = ['_N',num2str(N_eval)];
 
 % import models
-osimModel_ref   = Model(osimModel_ref_filepath);
-osimModel_targ  = Model(osimModel_targ_filepath);
+osimModel_ref = Model(osimModel_ref_filepath);
+osimModel_targ = Model(osimModel_targ_filepath);
 
 % models details
-[~, name, ext]   = fileparts(osimModel_targ_filepath);
+[~, name, ext] = fileparts(osimModel_targ_filepath);
 
 % assigning new name to the model
-osimModel_opt_name  = [name,'_opt',res_file_id_exp,ext];
+osimModel_opt_name = [name,'_opt',res_file_id_exp,ext];
 osimModel_targ.setName(osimModel_opt_name);
 
 % initializing log file
@@ -32,7 +32,7 @@ muscles_scaled = osimModel_targ.getMuscles;
 % initialize with recognizable values
 LmOptLts_opt = ones(muscles.getSize,2)*(-1000);
 
-for n_mus = 0:muscles.getSize-1
+for n_mus = nMuscleForUse-1 %muscles.getSize-1 % remove first comment to do all muscle from one side. For course, only use 1 to save time.
     tic
     
     % current muscle name (here so that it is possible to choose a single
@@ -92,8 +92,6 @@ for n_mus = 0:muscles.getSize-1
     % The problem to be solved is: 
     % [LmNorm*cos(penAngle) LtNorm]*[Lmopt Lts]' = MTL;
     % written as Ax = b
-%     A = [LfibNormOnTen_ref LtenNorm_ref];
-%     b = MTL_targ;
     A = [LfibNormOnTen_ref LtenNorm_ref];
     b = MTL_targ;
 

@@ -16,7 +16,7 @@
 % errors).
 
 function Results_MusMapMetrics = assessSelectMuscleMapping(Template_osimModel,...
-                                                    Opt_osimModel, N_eval, )
+                                                    Opt_osimModel, N_eval, nMuscleForUse)
 
 
 % importing OpenSim libraries
@@ -50,11 +50,11 @@ res_mat_file_name = ['Results_MusMapMetrics',res_file_id_exp];
 %     end
 % end
 
-for n_mus = 0:muscles_ref.getSize()-1
+for n_mus = 0:nMuscleForUse-1
     
     % current muscle name
     curr_mus_name = muscles_ref.get(n_mus).getName;
-    display(['Processing ',char(curr_mus_name)])
+    disp(['Processing ',char(curr_mus_name)])
     
     % Extracting the current muscle from the two models
     currentMuscle_Templ = muscles_ref.get(curr_mus_name);
@@ -103,9 +103,9 @@ for n_mus = 0:muscles_ref.getSize()-1
     
         n_sample_old = length(Lm_Norm_Templ);
     
-    if n_sample_old~=length(Lm_Norm_Templ);
-        display(['Null fiber length detected for muscle ',char(currentMuscleScaled.getName),'. These points have been removed from the optimization.']);
-        display(['From ', num2str(n_sample_old), ' to ', num2str(length(Lm_Norm_Templ))])
+    if n_sample_old~=length(Lm_Norm_Templ)
+        disp(['Null fiber length detected for muscle ',char(currentMuscleScaled.getName),'. These points have been removed from the optimization.']);
+        disp(['From ', num2str(n_sample_old), ' to ', num2str(length(Lm_Norm_Templ))])
     end
     
     
